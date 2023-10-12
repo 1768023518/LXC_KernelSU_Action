@@ -56,8 +56,6 @@ jobs:
 
     - name: Download kernel source
       run: |
-        mkdir /kernel_workspace
-        cd /kernel_workspace
         git clone ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
 
     - name: Download source boot image
